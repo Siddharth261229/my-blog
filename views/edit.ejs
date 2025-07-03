@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head") %>
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body>
+    <a href="/landing" class="home-btn"><i class="fas fa-home"></i> Home</a>
+    <div class="container">
+      <h1>Edit Post</h1>
+      <form action="/edit/<%= post.id %>" method="POST" class="edit-mode">
+        <input
+          style="color: aliceblue"
+          type="text"
+          name="postTitle"
+          value="<%= post.title %>"
+          required
+          class="edit-input-title"
+          placeholder="Enter title"
+        />
+        <textarea
+          style="color: aliceblue"
+          name="postContent"
+          class="edit-textarea-body"
+          placeholder="Write your content here..."
+          rows="6"
+          required
+        >
+<%= post.content %></textarea
+        >
+      </form>
+      <div class="post-actions">
+        <button type="submit" class="action-btn save">Save</button>
+        <a href="/home" class="action-btn cancel">Cancel</a>
+        <form
+          action="/delete/<%= post.id %>"
+          method="POST"
+          style="display: inline"
+        >
+          <button type="submit" class="action-btn delete">🗑️ Delete</button>
+        </form>
+      </div>
+
+      <div class="share-buttons">
+        <a
+          href="https://twitter.com/intent/tweet?text=<%= encodeURIComponent(post.title + ' - ' + post.content) %>&url=<%= encodeURIComponent('http://localhost:3000') %>"
+          target="_blank"
+          class="share-btn twitter"
+          >Tweet</a
+        >
+        <a
+          href="https://www.linkedin.com/sharing/share-offsite/?url=<%= encodeURIComponent('http://localhost:3000') %>"
+          target="_blank"
+          class="share-btn linkedin"
+          >Share</a
+        >
+        <a
+          href="https://api.whatsapp.com/send?text=<%= encodeURIComponent(post.title + ': http://localhost:3000') %>"
+          target="_blank"
+          class="share-btn whatsapp"
+          >WhatsApp</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

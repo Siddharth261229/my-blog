@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head") %>
+    <title>Compose</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body class="<%= theme %>-theme">
+    <a href="/landing" class="home-btn"> <i class="fas fa-home"></i> Home </a>
+    <div class="compose-container">
+      <form
+        action="/compose?theme=<%= theme %>"
+        method="POST"
+        class="compose-form"
+      >
+        <input
+          type="text"
+          name="postTitle"
+          placeholder="Enter your title here..."
+          class="compose-title"
+          required
+        />
+        <textarea
+          name="postBody"
+          placeholder="Write your blog post..."
+          class="compose-body"
+          required
+        ></textarea>
+        <button type="submit" class="submit-btn">Publish ✨</button>
+      </form>
+    </div>
+    <div class="theme-effect-container"></div>
+    <script>
+      const theme = "<%= theme %>";
+      const container = document.querySelector(".theme-effect-container");
+
+      if (theme === "snow") {
+        setInterval(() => {
+          const flake = document.createElement("div");
+          flake.classList.add("flake");
+          flake.textContent = "❄";
+          flake.style.left = Math.random() * window.innerWidth + "px";
+          flake.style.animationDuration = Math.random() * 4 + 3 + "s";
+          flake.style.fontSize = Math.random() * 15 + 25 + "px";
+          flake.style.opacity = 0.8;
+          container.appendChild(flake);
+          setTimeout(() => flake.remove(), 6000);
+        }, 120);
+      } else if (theme === "maple") {
+        setInterval(() => {
+          const leaf = document.createElement("div");
+          leaf.classList.add("leaf");
+          leaf.textContent = "🍁";
+          leaf.style.left = Math.random() * window.innerWidth + "px";
+          leaf.style.animationDuration = Math.random() * 5 + 5 + "s";
+          leaf.style.fontSize = Math.random() * 20 + 30 + "px";
+          leaf.style.opacity = 0.9;
+          container.appendChild(leaf);
+          setTimeout(() => leaf.remove(), 8000);
+        }, 300);
+      } else if (theme === "rain") {
+        setInterval(() => {
+          const drop = document.createElement("div");
+          drop.classList.add("drop");
+          drop.textContent = "|";
+          drop.style.left = Math.random() * window.innerWidth + "px";
+          drop.style.animationDuration = Math.random() * 1 + 1.2 + "s";
+          drop.style.fontSize = "30px";
+          drop.style.opacity = 0.6 + Math.random() * 0.4;
+          drop.style.color = "#4fc3f7";
+          drop.style.textShadow = "0 0 4px rgba(0,0,0,0.5)";
+          container.appendChild(drop);
+          setTimeout(() => drop.remove(), 3000);
+        }, 80);
+      }
+    </script>
+  </body>
+</html>

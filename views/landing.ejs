@@ -1,0 +1,14 @@
+<!-- views/landing.ejs -->
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head', { title: 'Choose Your Mood' }) %>
+  <body class="landing-body">
+    <a href="/landing" class="home-btn"><i class="fas fa-home"></i> Home</a>
+    <main class="mood-selector">
+      <h1>Choose Your Blog Mood</h1>
+      <a class="mood rain" href="/home?theme=rain">🌧️ Rain</a>
+      <a class="mood snow" href="/home?theme=snow">❄️ Snow</a>
+      <a class="mood maple" href="/home?theme=maple">🍁 Maple</a>
+    </main>
+  </body>
+</html>

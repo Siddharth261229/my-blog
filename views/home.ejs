@@ -1,0 +1,134 @@
+<html lang="en">
+  <head>
+    <%- include("partials/head") %>
+    <title>Blog Home</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body class="<%= theme %>-theme">
+    <div class="top-bar">
+      <div class="left-section">
+        <a href="/landing" class="btn home-btn">Home</a>
+      </div>
+      <div class="right-section">
+        <% if (user) { %>
+        <span class="welcome-msg">👋 Welcome, <%= user.username %>!</span>
+        <a href="/logout" class="btn logout-btn">Logout</a>
+        <% } else { %>
+        <a href="/login" class="btn login-btn">Login</a>
+        <a href="/register" class="btn register-btn">Register</a>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="container">
+      <section class="hero">
+        <h2 style="color: aliceblue">Welcome to My Blog</h2>
+        <p style="color: aliceblue">
+          Share your thoughts, stories, and ideas in your personal journal
+          space.
+        </p>
+      </section>
+      <p class="post-count" style="color: aliceblue">
+        You have <%= posts.length %> posts.
+      </p>
+
+      <a class="create-post-button" href="/compose?theme=<%= theme %>"
+        >Create New Post</a
+      >
+
+      <div style="margin-top: 20px">
+        <input
+          style="background-color: black"
+          type="text"
+          id="search"
+          placeholder="Search posts by title..."
+        />
+      </div>
+
+      <div class="post-grid">
+        <% posts.forEach(function(post) { %>
+        <div
+          class="post"
+          ondblclick="window.location.href='/edit/<%= post.id %>'"
+        >
+          <div class="display-mode">
+            <h2><%= post.title %></h2>
+            <% if (post.createdAt) { %>
+            <small class="date"
+              >🕒 <%= new Date(post.createdAt).toLocaleDateString("en-GB", {
+              year: 'numeric', month: 'short', day: 'numeric' }) %></small
+            >
+            <% } %>
+            <p>
+              <%= post.content.length > 100 ? post.content.substring(0, 100) +
+              "..." : post.content %>
+            </p>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+
+      <script>
+        document
+          .getElementById("search")
+          .addEventListener("input", function () {
+            const value = this.value.toLowerCase();
+            document.querySelectorAll(".post").forEach((post) => {
+              const title = post.querySelector("h2").innerText.toLowerCase();
+              post.style.display = title.includes(value) ? "block" : "none";
+            });
+          });
+      </script>
+
+      <div class="theme-effect-container"></div>
+      <script>
+        const theme = "<%= theme %>";
+        const container = document.querySelector(".theme-effect-container");
+
+        if (theme === "snow") {
+          setInterval(() => {
+            const flake = document.createElement("div");
+            flake.classList.add("flake");
+            flake.textContent = "❄";
+            flake.style.left = Math.random() * window.innerWidth + "px";
+            flake.style.animationDuration = Math.random() * 4 + 3 + "s";
+            flake.style.fontSize = Math.random() * 15 + 25 + "px";
+            flake.style.opacity = 0.8;
+            container.appendChild(flake);
+            setTimeout(() => flake.remove(), 6000);
+          }, 120);
+        } else if (theme === "maple") {
+          setInterval(() => {
+            const leaf = document.createElement("div");
+            leaf.classList.add("leaf");
+            leaf.textContent = "🍁";
+            leaf.style.left = Math.random() * window.innerWidth + "px";
+            leaf.style.animationDuration = Math.random() * 5 + 5 + "s";
+            leaf.style.fontSize = Math.random() * 20 + 30 + "px";
+            leaf.style.opacity = 0.9;
+            container.appendChild(leaf);
+            setTimeout(() => leaf.remove(), 8000);
+          }, 300);
+        } else if (theme === "rain") {
+          setInterval(() => {
+            const drop = document.createElement("div");
+            drop.classList.add("drop");
+            drop.textContent = "|";
+            drop.style.left = Math.random() * window.innerWidth + "px";
+            drop.style.animationDuration = Math.random() * 1 + 1.2 + "s";
+            drop.style.fontSize = "30px";
+            drop.style.opacity = 0.6 + Math.random() * 0.4;
+            drop.style.color = "#03a9f4";
+            drop.style.textShadow = "0 0 4px rgba(0,0,0,0.5)";
+            container.appendChild(drop);
+            setTimeout(() => drop.remove(), 3000);
+          }, 80);
+        }
+      </script>
+    </div>
+  </body>
+
+  <footer>
+    <p>Made with ☕ and 💻 | © 2025 My Blog</p>
+  </footer>
+</html>
