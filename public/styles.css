@@ -49,7 +49,7 @@ body {
 
 .quote {
   font-style: italic;
-  font-size: 20px;
+  font-size: 16px;
   color: #555;
   text-align: center;
   margin: 20px 0;
@@ -95,7 +95,7 @@ body::before {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 30px;
   color: white; /* Moved here from a separate declaration */
@@ -112,17 +112,17 @@ textarea {
 }
 
 /* .create-post-button {
-  padding: 6px 12px;
-  font-size: 13px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  color: white;
-  transition: background-color 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-} */
+    padding: 6px 12px;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  } */
 
 .post {
   border-top: 3px dashed #4a4a4a; /* Soft neutral border */
@@ -156,7 +156,7 @@ textarea {
 }
 
 .post h2 {
-  font-size: 20px;
+  font-size: 14px;
   margin-bottom: 8px; /* Corrected margin shorthand */
   color: white;
 }
@@ -513,12 +513,12 @@ button:hover,
 }
 
 /* .left-section,
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-} */
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  } */
 
 .welcome-msg {
   font-size: 1rem;
@@ -613,68 +613,4 @@ footer {
   margin-top: 40px;
   color: #999;
   font-size: 13px;
-}
-
-.post-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.action-btn {
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.action-btn.save {
-  color: white;
-}
-
-.action-btn.cancel {
-  color: white;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-
-.action-btn.delete {
-  color: white;
-}
-.action-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.share-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.share-btn {
-  background-color: #333;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.post-actions {
-  display: flex;
-  gap: 10px;
-}
-
-.delete-form {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
 }

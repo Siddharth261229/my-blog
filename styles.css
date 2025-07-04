@@ -1,0 +1,175 @@
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dancing Script", cursive;
+  background-image: url("/public/japan-city-night-with-tall-building.jpg");
+  background-color: #111;
+  color: #eee;
+  background-attachment: fixed;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+/* === Container === */
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 30px;
+  background-color: rgba(3, 3, 3, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* === Buttons === */
+button,
+.btn,
+.register-btn,
+.login-btn,
+.logout-btn,
+.google-btn,
+.home-btn {
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #eee;
+  background-color: #1f1f23;
+  border: 1px solid #333;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover,
+.btn:hover,
+.home-btn:hover {
+  background-color: #2a2a2e;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+/* === Home Button Positioning === */
+.home-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* === Forms === */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-family: "Dancing Script", cursive;
+  border-radius: 10px;
+  border: 1px solid #555;
+  margin-bottom: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* === Theme Effects === */
+.theme-effect-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.flake,
+.leaf,
+.drop {
+  position: absolute;
+  top: 0;
+  animation: fall linear forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* === Theming Classes === */
+.rain-theme {
+  background-image: url("/rain-bg.jpg");
+  color: #d0f0ff;
+}
+
+.snow-theme {
+  background-image: url("/snow-bg.jpg");
+  color: #eef;
+}
+
+.maple-theme {
+  background-image: url("/maple-bg.jpg");
+  color: #f5e8da;
+}
+
+/* === Welcome & Headings === */
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* === Share Buttons === */
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.share-btn {
+  background-color: #2e2e38;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+  background-color: #3a3a45;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #fff, 0 0 20px rgba(18, 17, 17, 0.4);
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #999;
+  font-size: 13px;
+}

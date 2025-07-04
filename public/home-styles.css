@@ -1,0 +1,220 @@
+/* ===== Background Effects ===== */
+.theme-effect-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.flake,
+.leaf,
+.drop {
+  position: absolute;
+  top: 0;
+  animation: fall linear forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-spin {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ===== Page Background and Fonts ===== */
+body {
+  font-family: "Dancing Script", cursive;
+  background-image: url("/japan-city-night-with-tall-building.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  animation: scrollBG 60s linear infinite;
+  position: relative;
+  color: #f0f0f0;
+}
+
+@keyframes scrollBG {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: rgba(14, 13, 13, 0.2);
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.home-btn {
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #3a3a3f;
+}
+
+.welcome-msg {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.welcome-msg:hover {
+  background: rgba(235, 232, 232, 0.6);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(3, 3, 3, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: #fff;
+}
+
+/* ===== Search Input ===== */
+#search {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Dancing Script", cursive;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+/* ===== Post Grid and Post Box ===== */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.post {
+  border-top: 3px dashed #4a4a4a;
+  padding: 15px;
+  margin-top: 25px;
+  background-color: #1e1e1f;
+  border: 2px solid #333;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+  transform: scale(1.01);
+  box-shadow: 4px 4px 16px rgba(255, 255, 255, 0.05);
+}
+
+.post h2 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.post p {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ddd;
+}
+
+.date {
+  display: block;
+  font-size: 12px;
+  color: #f5f0f0;
+  margin-bottom: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #999;
+  font-size: 13px;
+}
+
+/* ===== Responsive ===== */
+@media only screen and (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #search {
+    font-size: 13px;
+  }
+
+  .welcome-msg {
+    font-size: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+}

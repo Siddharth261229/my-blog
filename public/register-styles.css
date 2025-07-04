@@ -1,0 +1,128 @@
+/* === Register Page Specific Styling === */
+
+body {
+  font-family: "Dancing Script", cursive;
+  background-image: url("/japan-city-night-with-tall-building.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  animation: scrollBG 60s linear infinite;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@keyframes scrollBG {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* === Container Styling === */
+.container.compose-form {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: rgba(3, 3, 3, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* === Heading === */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* === Input Fields === */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: #1e1e22;
+  color: #eee;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 119, 255, 0.3);
+}
+
+/* === Button Base === */
+button.register-btn,
+a.google-btn,
+a.login-btn,
+a.home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: white;
+  margin-top: 10px;
+}
+
+/* === Specific Buttons === */
+button.register-btn {
+  background-color: #2a2a2e;
+}
+button.register-btn:hover {
+  background-color: #3a3a3f;
+  transform: scale(1.03);
+}
+
+a.google-btn {
+  background-color: #db4437;
+}
+a.google-btn:hover {
+  background-color: #c1351d;
+  transform: scale(1.03);
+}
+
+a.login-btn {
+  background-color: #2d2d33;
+}
+a.login-btn:hover {
+  background-color: #3a3a3f;
+  transform: scale(1.03);
+}
