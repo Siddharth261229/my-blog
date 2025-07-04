@@ -143,6 +143,7 @@ body::before {
   padding: 10px 16px;
   font-size: 1rem;
   font-weight: 600;
+  font-family: "Dancing Script";
   color: white;
   background-color: #101010;
   border: none;

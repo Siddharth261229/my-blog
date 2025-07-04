@@ -368,6 +368,7 @@ button,
   gap: 8px;
   padding: 10px 16px;
   font-size: 0.95rem;
+
   font-weight: 600;
   color: #eee;
   background-color: #1f1f23;
@@ -388,7 +389,6 @@ button:hover,
 
 /* === Specific Buttons === */
 .submit-btn {
-  background-color: #0077ff;
   color: white;
 }
 
@@ -444,11 +444,13 @@ button:hover,
   transition: background 0.3s ease;
 }
 
-.home-btn:hover {
+.home-btn:hover,
+.logout-btn:hover {
   background: #3a3a3f;
 }
 
-.home-btn i {
+.home-btn i,
+.logout-btn {
   margin-right: 8px;
 }
 
@@ -464,8 +466,7 @@ button:hover,
 /* Auth Buttons */
 .register-btn,
 .login-btn,
-.google-btn,
-.logout-btn {
+.google-btn .logout-btn {
   min-width: 120px;
   justify-content: center;
 }
@@ -480,8 +481,12 @@ button:hover,
   background-color: #2d2d33;
 }
 .logout-btn {
-  background: #2a2a2e;
   color: #fff;
+
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  border-radius: 10px;
 }
 
 .welcome-msg {

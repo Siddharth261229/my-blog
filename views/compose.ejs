@@ -8,6 +8,11 @@
   </head>
   <body class="<%= theme %>-theme">
     <a href="/landing" class="home-btn"> <i class="fas fa-home"></i> Home </a>
+    <a
+          style="text-decoration: none; font-size: 1rem;"
+          href="/logout"
+          class="logout-btn"
+          >Logout</a
     <div class="compose-container">
       <form
         action="/compose?theme=<%= theme %>"
@@ -27,7 +32,7 @@
           class="compose-body"
           required
         ></textarea>
-        <button type="submit" class="submit-btn">Publish ✨</button>
+        <button type="submit" class="submit-btn">Publish</button>
       </form>
     </div>
     <div class="theme-effect-container"></div>

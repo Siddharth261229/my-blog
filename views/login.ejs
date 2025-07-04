@@ -7,7 +7,7 @@
     style="background-color: rgba(3, 3, 3, 0.6)"
     class="container compose-form"
   >
-    <h1>Login</h1>
+    <h1 style="font-size: 2rem">Login</h1>
     <form action="/login" method="POST">
       <input
         style="padding: 8px 14px; border-radius: 10px"
@@ -23,11 +23,22 @@
         placeholder="Password"
         required
       />
-      <button class="login-btn" type="submit">Login</button>
+      <button
+        style="font-family: Dancing Script"
+        class="login-btn"
+        type="submit"
+      >
+        Login
+      </button>
     </form>
-    <a href="/auth/google" class="google-btn">
-      <i class="fab fa-google"></i> Login with Google
+    <a
+      style="text-decoration: none; font-size: 1rem"
+      href="/auth/google"
+      class="google-btn"
+    >
+      <i class="fab fa-google"></i>
+      Login with Google
     </a>
-    <a href="/landing" class="home-btn"> <i class="fas fa-home"></i> Home </a>
+    <a href="/" class="home-btn"> <i class="fas fa-home"></i> Home </a>
   </div>
 </body>

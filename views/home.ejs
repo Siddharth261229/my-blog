@@ -12,8 +12,13 @@
       </div>
       <div class="right-section">
         <% if (user) { %>
-        <span class="welcome-msg">👋 Welcome, <%= user.username %>!</span>
-        <a href="/logout" class="btn logout-btn">Logout</a>
+        <span class="welcome-msg">Welcome, <%= user.username %>!</span>
+        <a
+          style="text-decoration: none; font-size: 1rem"
+          href="/logout"
+          class="btn logout-btn"
+          >Logout</a
+        >
         <% } else { %>
         <a href="/login" class="btn login-btn">Login</a>
         <a href="/register" class="btn register-btn">Register</a>
@@ -33,7 +38,10 @@
         You have <%= posts.length %> posts.
       </p>
 
-      <a class="create-post-button" href="/compose?theme=<%= theme %>"
+      <a
+        style="text-decoration: none; font-size: 1rem"
+        class="create-post-button"
+        href="/compose?theme=<%= theme %>"
         >Create New Post</a
       >
 

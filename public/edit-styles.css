@@ -162,6 +162,7 @@ h1 {
 
 .action-btn.cancel {
   background-color: #555;
+  text-decoration: none;
 }
 
 .action-btn.cancel:hover {
