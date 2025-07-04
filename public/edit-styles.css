@@ -210,3 +210,53 @@ h1 {
     font-size: 1.5rem;
   }
 }
+.edit-mode {
+  background-color: rgba(42, 42, 46, 0.6); /* semi-transparent dark */
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle light border */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInUp 0.5s ease-out forwards;
+  backdrop-filter: blur(6px); /* optional: adds a frosted glass effect */
+}
+
+.edit-input-title,
+.edit-textarea-body {
+  width: 100%;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px;
+  background-color: rgba(6, 6, 6, 0.7); /* more transparent dark input */
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  resize: vertical;
+}
+
+.edit-input-title::placeholder,
+.edit-textarea-body::placeholder {
+  color: #999;
+}
+
+.edit-input-title:focus,
+.edit-textarea-body:focus {
+  outline: none;
+  background-color: rgba(6, 6, 6, 0.85);
+  box-shadow: 0 0 12px rgba(0, 119, 255, 0.3);
+}
+
+.edit-textarea-body {
+  min-height: 180px;
+}
+
+.post-actions button {
+  margin-right: 10px;
+}

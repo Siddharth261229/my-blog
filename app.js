@@ -25,6 +25,7 @@ console.log("CLIENT ID:", process.env.GOOGLE_CLIENT_ID);
 console.log("CLIENT SECRET:", process.env.GOOGLE_CLIENT_SECRET);
 
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));

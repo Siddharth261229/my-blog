@@ -125,3 +125,43 @@ body::before {
     font-size: 2rem;
   }
 }
+
+.poem-box {
+  margin: 30px auto 0;
+  padding: 25px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  max-width: 600px;
+  animation: fadeInPoem 1s ease-in-out;
+  font-family: "Dancing Script", cursive;
+  color: #f3f3f3;
+}
+
+.poem-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.poem-line {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 4px 0;
+  color: #e0e0e0;
+}
+
+@keyframes fadeInPoem {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

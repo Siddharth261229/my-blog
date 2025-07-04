@@ -100,11 +100,24 @@ body::before {
 }
 
 .compose-form {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #2a2a2e;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.95);
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid #3a3a3a;
+  color: #e5e5e5;
+  box-sizing: border-box;
 }
-
 .compose-title,
 .compose-body {
   width: 100%;
@@ -143,7 +156,7 @@ body::before {
   padding: 10px 16px;
   font-size: 1rem;
   font-weight: 600;
-  font-family: "Dancing Script";
+
   color: white;
   background-color: #101010;
   border: none;

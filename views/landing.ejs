@@ -3,7 +3,7 @@
 <html>
   <%- include('partials/head', { title: 'Choose Your Mood' }) %>
   <link rel="stylesheet" href="/public/styles.css" />
-  <link rel="stylesheet" href="/public/landing-styles.css" />
+  <link rel="stylesheet" href="/landing-styles.css" />
 
   <body class="landing-body">
     <a href="/landing" class="home-btn"><i class="fas fa-home"></i> Home</a>
@@ -14,4 +14,12 @@
       <a class="mood maple" href="/home?theme=maple">🍁 Maple</a>
     </main>
   </body>
+  <div class="poem-box">
+    <h2 class="poem-title">“Midnight Code”</h2>
+    <p class="poem-line">Keys clack softly under moon’s bright eye,</p>
+    <p class="poem-line">Dreams in code begin to fly.</p>
+    <p class="poem-line">In silent screens, our voices write,</p>
+    <p class="poem-line">A quiet world lit up at night.</p>
+  </div>
+  <%- include('partials/footer') %>
 </html>
