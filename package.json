@@ -24,5 +24,13 @@
     "sequelize": "^6.37.7"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siddharth261229/my-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Siddharth261229/my-blog/issues"
+  },
+  "homepage": "https://github.com/Siddharth261229/my-blog#readme",
   "description": ""
 }
