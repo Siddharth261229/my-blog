@@ -217,23 +217,23 @@ button:hover,
 .register-btn {
   background-color: #2d2d33;
 }
-.login-btn {
+/* .login-btn {
   background-color: #2d2d33;
   position: fixed;
   right: 20px;
   margin-top: 10px;
-}
+} */
 .google-btn {
   background-color: #2d2d33;
 }
-.logout-btn {
+/* .logout-btn {
   position: fixed;
   right: 20px;
   color: #fff;
   margin-top: 10px;
   padding: 10px 20px;
   border-radius: 10px;
-}
+} */
 
 .top-bar {
   display: flex;
@@ -254,12 +254,6 @@ button:hover,
     gap: 12px;
     flex-wrap: wrap;
   } */
-
-.welcome-msg {
-  font-size: 1rem;
-  color: #f4e9e9;
-  font-weight: 600;
-}
 
 .post-actions,
 .share-buttons {

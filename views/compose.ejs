@@ -3,16 +3,13 @@
   <head>
     <%- include("partials/head") %>
     <title>Compose</title>
-    <link rel="stylesheet" href="/public/styles.css" />
     <link rel="stylesheet" href="/compose-styles.css" />
   </head>
   <body class="<%= theme %>-theme">
-    <a href="/landing" class="home-btn"> <i class="fas fa-home"></i> Home </a>
-    <a
-          style="text-decoration: none; font-size: 1rem;"
-          href="/logout"
-          class="logout-btn"
-          >Logout</a
+    <a href="/landing" class="home-btn"><i class="fas fa-home"></i> Home</a>
+    <a href="/logout" class="logout-btn"
+      ><i class="fas fa-sign-out-alt"></i> Logout</a
+    >
     <div class="compose-container">
       <form
         action="/compose?theme=<%= theme %>"
@@ -32,7 +29,13 @@
           class="compose-body"
           required
         ></textarea>
-        <button type="submit" class="submit-btn">Publish</button>
+        <button
+          style="font-family: Dancing Script"
+          type="submit"
+          class="submit-btn"
+        >
+          Publish
+        </button>
       </form>
     </div>
     <div class="theme-effect-container"></div>
@@ -82,5 +85,4 @@
     </script>
   </body>
   <%- include('partials/footer') %>
-
 </html>

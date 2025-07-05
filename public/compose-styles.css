@@ -208,3 +208,57 @@ body::before {
     padding: 8px 14px;
   }
 }
+
+/* ===== Navigation Buttons (Home & Logout) ===== */
+.home-btn,
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(30, 30, 30, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+  z-index: 1000;
+  font-size: 1rem;
+}
+
+.home-btn {
+  left: 20px;
+}
+
+.logout-btn {
+  right: 20px;
+}
+
+.home-btn:hover,
+.logout-btn:hover {
+  background-color: #3a3a3f;
+}
+
+/* Optional icon margin */
+.home-btn i,
+.logout-btn i {
+  margin-right: 8px;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 600px) {
+  .home-btn,
+  .logout-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    top: 10px;
+  }
+
+  .home-btn {
+    left: 10px;
+  }
+
+  .logout-btn {
+    right: 10px;
+  }
+}

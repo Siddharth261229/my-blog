@@ -88,17 +88,17 @@ h1 {
 }
 
 .login-btn {
-  background-color: #0077ff;
+  background-color: #2d2d33;
 }
 
 .login-btn:hover {
-  background-color: #005fcc;
+  background-color: #2d2d33;
 }
 
 .register-btn {
-  background-color: #28a745;
+  background-color: #2d2d33;
 }
 
 .register-btn:hover {
-  background-color: #218838;
+  background-color: #2d2d33;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include("partials/head") %>
-    <link rel="stylesheet" href="/public/start-styles.css" />
+    <link rel="stylesheet" href="/start-styles.css" />
     <!-- <link rel="stylesheet" href="/public/styles.css" /> -->
 
     <title>Welcome</title>
@@ -14,7 +14,14 @@
         Your space to create, share, and inspire.
       </p>
 
-      <div style="display: flex; gap: 20px; justify-content: center">
+      <div
+        style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          position: relative;
+        "
+      >
         <a
           style="text-decoration: none; font-size: 1rem"
           href="/login"
