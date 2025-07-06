@@ -2,15 +2,15 @@
 
 body {
   font-family: "Dancing Script", cursive;
-  background-image: url("/japan-city-night-with-tall-building.jpg");
+  background-image: url("./1200x1200bf-60.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: repeat;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  animation: scrollBG 60s linear infinite;
+  /* overflow-x: hidden; */
+  /* animation: scrollBG 60s linear infinite; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,14 +18,14 @@ body {
   color: #f0f0f0;
 }
 
-@keyframes scrollBG {
+/* @keyframes scrollBG {
   0% {
     background-position: 0 0;
   }
   100% {
     background-position: 1000px 1000px;
   }
-}
+} */
 
 body::before {
   content: "";
