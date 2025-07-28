@@ -4,11 +4,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
     "start": "node app.js", // Crucial! Render runs this command
     "dev": "nodemon app.js" // Your development script
-  },
+  },   
   "keywords": [],
   "author": "",
   "license": "ISC",
